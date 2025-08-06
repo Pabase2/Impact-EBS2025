@@ -38,17 +38,19 @@
       background: var(--white);
       overflow:hidden;
     }
-    .hero .wrap { max-width: 1100px; margin: 0 auto; display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; }
+    .hero .wrap { max-width: 1100px; margin: 0 auto; display:grid; grid-template-columns: 1fr 1fr; gap:28px; align-items:center; }
     .hero-left h2 {
       font-size: 36px; line-height:1.15; margin: 12px 0 4px;
     }
     .hero-left p { font-size:18px; color:var(--slate); margin: 0 0 14px; }
-    .logo-lockup {
-      display:flex; align-items:center; gap:16px;
+    .logo-book-wrap {
+      display:flex; align-items:center; gap:24px; flex-wrap:wrap;
     }
-    .logo-lockup img {
-      width: 520px; max-width: 100%; height:auto; display:block;
-      box-shadow: 0 8px 30px rgba(0,0,0,.06); border-radius: 8px;
+    .logo-book-wrap img.logo {
+      width: 320px; height:auto; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    }
+    .logo-book-wrap img.book {
+      width: 380px; height:auto; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,.1);
     }
     .cta-row { display:flex; flex-wrap:wrap; gap:12px; margin: 12px 0 0; }
     .cta {
@@ -98,6 +100,7 @@
     footer p { margin:0; font-size:14px; }
     @media (max-width: 900px){
       .hero .wrap { grid-template-columns: 1fr; }
+      .logo-book-wrap { justify-content:center; }
       .cards { grid-template-columns: 1fr; }
     }
   </style>
@@ -120,8 +123,11 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-left">
-        <div class="logo-lockup">
-          <img src="assets/impact-logo.png" alt="Impact Employee Benefit Strategies Logo" />
+        <div class="logo-book-wrap">
+          <img class="logo" src="assets/impact-logo.png" alt="Impact Employee Benefit Strategies Logo" />
+          <a href="https://www.healthapocalypse.com" target="_blank" rel="noopener">
+            <img class="book" src="assets/book-cover.png" alt="The Survival Guide to the Healthcare Apocalypse Book Cover" />
+          </a>
         </div>
         <h2>The Healthcare Apocalypse Has Already Begun</h2>
         <p>Are you going to let it take your business down with it? Re-engineer your plan with ICHRA, level/self-funded designs, and DPC.</p>
@@ -129,8 +135,6 @@
           <a class="cta" href="https://www.healthapocalypse.com" target="_blank" rel="noopener">Get the Free Book Chapter</a>
           <a class="cta secondary" href="#contact">Schedule a Strategy Call</a>
         </div>
-      </div>
-      <div class="hero-right">
       </div>
     </div>
   </section>
